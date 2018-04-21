@@ -52,7 +52,7 @@ def unflatter(args):
 
     for p in targetdir.iterdir():
         if p.is_file():
-            splitted_path = p.name.split(separater)
+            splitted_path = p.name.split(separater,1)
             if len(splitted_path) == 2:
                 subdir = Path(splitted_path[0])
                 filename = Path(splitted_path[1])
